@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .shape {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .box {
+            background-color: #61dafb;
+        }
+        .circle {
+            background-color: #e74c3c;
+            border-radius: 50%;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #f39c12;
+        }
+        .diamond {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom: 50px solid #8e44ad;
+            position: relative;
+            top: -50px;
+        }
+        .diamond:after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 50px;
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top: 50px solid #8e44ad;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shape box" id="box"></div>
+        <div class="shape circle" id="circle"></div>
+        <div class="shape triangle" id="triangle"></div>
+        <div class="shape diamond" id="diamond"></div>
+    </div>
+    <audio id="audio" src="your-audio-file.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
